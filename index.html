@@ -19,7 +19,7 @@
 <article>
 	<h1 id="headline">Собери своего DevOps'а</h1>
 	<p id="text">Собери свою уникальную коллаборацию в стиле DevOps и начни проповедовать прямо сейчас!</p>
-    <button id="shuffler">cобрать</button> 
+    <a class="button" id="shuffler" href="#">собрать</a>
     <!-- AddToAny BEGIN -->
     <div id="shareButton" class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="https://voborgus.github.io/GuessOps/" data-a2a-title="обери своего DevOps'а">
     <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
@@ -27,6 +27,8 @@
     <a class="a2a_button_twitter"></a>
     <a class="a2a_button_telegram"></a>
     <a class="a2a_button_linkedin"></a>
+    <a id="suggest" target="_blank" href="https://github.com/voborgus/GuessOps/edit/main/items.json">
+        предложить свой вариант</a>
     </div>
     <script>
     var a2a_config = a2a_config || {};
@@ -280,7 +282,7 @@ function WordShuffler(holder,opt){
     var items;
     var currentItem;
     async function retreiveItems() {
-        let response = await fetch('/items.json');
+        let response = await fetch('items.json');
         let data = await response.json();
         return data;
     }
